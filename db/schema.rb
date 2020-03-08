@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200308044605) do
+ActiveRecord::Schema.define(version: 20200308135847) do
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer "tester_id"
+    t.integer "tested_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tested_id"], name: "index_relationships_on_tested_id"
+    t.index ["tester_id", "tested_id"], name: "index_relationships_on_tester_id_and_tested_id", unique: true
+    t.index ["tester_id"], name: "index_relationships_on_tester_id"
+  end
 
   create_table "tests", force: :cascade do |t|
     t.string "subject"
