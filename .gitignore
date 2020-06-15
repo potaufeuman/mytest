@@ -33,3 +33,6 @@ app/assets/stylesheets/application.scss
 
 # アップロードされたテスト画像を無視する
 /public/uploads
+
+# 今はconflictするのでcircleciをignore
+.circleci/config.yml
