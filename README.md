@@ -1,3 +1,5 @@
+<html>
+<body>
 「MyTest」について
 <a href="https://mytest-learn-0to1.herokuapp.com/">https://mytest-learn-0to1.herokuapp.com/</a>
 
@@ -21,3 +23,5 @@
 ・Bootstrap
 ・Rspec
 ・Heroku
+</body>
+</html>
