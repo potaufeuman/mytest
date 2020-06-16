@@ -22,7 +22,8 @@ gem 'rails-i18n'
 group :development, :test do
   gem 'hirb'
   gem 'hirb-unicode'
-  gem 'sqlite3', '1.3.13'
+  # gem 'sqlite3', '1.3.13'
+  gem 'mysql2'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'spring-commands-rspec'
   gem 'rails-controller-testing'
@@ -58,6 +59,8 @@ end
 group :production do
   gem 'pg', '0.20.0'
   gem 'fog', '1.42'
+  gem 'unicorn'
+  gem 'mysql2'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
