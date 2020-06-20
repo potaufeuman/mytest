@@ -25,4 +25,5 @@ production:
   # database: db/production.sqlite3
   database: mytest_production
   username: root #ここをrootに変更する
-  password:      #ここを空欄にする
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
