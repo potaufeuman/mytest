@@ -1,23 +1,23 @@
-# app_path = File.expand_path('../../', __FILE__)  capistrano導入前
-app_path = File.expand_path('../../../', __FILE__)
+app_path = File.expand_path('../../', __FILE__)  # capistrano導入前
+# app_path = File.expand_path('../../../', __FILE__)  # capistrano導入
 
 #アプリケーションサーバの性能を決定する
 worker_processes 1
 
 #アプリケーションの設置されているディレクトリを指定
-# working_directory app_path  capistrano導入前
-working_directory "#{app_path}/current"
+working_directory app_path  # capistrano導入前
+# working_directory "#{app_path}/current"  # capistrano導入
 
 #Unicornの起動に必要なファイルの設置場所を指定
 pid "#{app_path}/tmp/pids/unicorn.pid"
 
 # #ポート番号を指定
-# # listen 3000
-# listen "#{app_path}/tmp/sockets/unicorn.sock"  capistrano導入前
-# #エラーのログを記録するファイルを指定
-# stderr_path "#{app_path}/log/unicorn.stderr.log"
-# #通常のログを記録するファイルを指定
-# stdout_path "#{app_path}/log/unicorn.stdout.log"
+# # listen 3000  # nginx
+listen "#{app_path}/tmp/sockets/unicorn.sock"  # capistrano導入前
+#エラーのログを記録するファイルを指定
+stderr_path "#{app_path}/log/unicorn.stderr.log"
+#通常のログを記録するファイルを指定
+stdout_path "#{app_path}/log/unicorn.stdout.log"
 
 listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
 pid "#{app_path}/shared/tmp/pids/unicorn.pid"
