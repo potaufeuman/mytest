@@ -13,7 +13,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w(bootstrap/*, *.css, *.scss, applicaiton.css, applicaiton.scss)
 
-以下、すべてのアセットをプリコンパイル
+# 以下、すべてのアセットをプリコンパイル
 Rails.application.config.assets.precompile << Proc.new do |path|
   if path =~ /\.(css|js)\z/
     full_path = Rails.application.assets.resolve(path).to_path
