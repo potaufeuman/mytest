@@ -18,7 +18,6 @@ gem 'jbuilder',     '2.7.0'
 gem 'ransack'
 gem 'rails-i18n'
 gem 'therubyracer'
-# bundle update actionviewを実行
 
 group :development, :test do
   gem 'hirb'
