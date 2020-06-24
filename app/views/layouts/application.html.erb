@@ -48,6 +48,8 @@
   <body>
     <div id="top_page"></div> <!-- 画面トップへのスクロール用 -->
     <%= render 'layouts/header' %>
+    <button id='scroll_top' class="btn_fix_top btn-lg btn-primary">▲</button>
+    <button id='scroll_bottom' class="btn_fix_bottom btn-lg btn-primary">▼</button>
     <div class = "container">
       <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
