@@ -22,9 +22,9 @@
         (Ruby 2.6.3)
         (Rails 5.1.6)
       データベース<br>
-      <li>・MySQL</li>
+      <li>MySQL</li>
       スタイル<br>
-      <li>・Bootstrap</li>
+      <li>Bootstrap</li>
       テスト<br>
       <li>Rspec</li>
       デプロイ<br>
